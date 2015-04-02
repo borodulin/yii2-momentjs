@@ -16,9 +16,11 @@ class MomentjsAsset extends \yii\web\AssetBundle
 	
 	public function registerAssetFiles($view)
 	{
-		if(self::$language)
+		if(self::$language){
 			$this->js=['moment-with-locales.min.js'];
-		else
+			//set locale globally
+			$view->registerJs('moment.locale("'.self::$language.'");');
+		}else
 			$this->js=['moment.min.js'];
 		
 		parent::registerAssetFiles($view);
