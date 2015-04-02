@@ -1,7 +1,7 @@
 {
     "name": "conquer/momentjs",
-    "description": "Conquer monet widget",
-    "keywords": ["yii2", "extension", "widget", "momentjs"],
+    "description": "Conquer moment.js widget",
+    "keywords": ["yii2", "extension", "widget", "momentjs", "moment"],
     "homepage": "https://github.com/borodulin/yii2-momentjs",
     "type": "yii2-extension",
     "license": "MIT",
@@ -9,7 +9,7 @@
         {
             "name": "Andrey Borodulin",
             "email": "borodulin@gmail.com",
-            "homepage": "https://github.com/borodulin/yii2-moment"
+            "homepage": "https://github.com/borodulin/yii2-momentjs"
         }
     ],
     "extra": {
