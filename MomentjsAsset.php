@@ -10,10 +10,18 @@ class MomentjsAsset extends \yii\web\AssetBundle
 {
 	// The files are not web directory accessible, therefore we need
 	// to specify the sourcePath property. Notice the @bower alias used.
-	public $sourcePath = '@bower/moment';
+	public $sourcePath = '@bower/moment/min';
 	
-	public $js=[
-		'min/moment-with-locales.min.js',
-	];
+	public static $language=false;
+	
+	public function registerAssetFiles($view)
+	{
+		if(self::$language)
+			$this->js=['moment-with-locales.min.js'];
+		else
+			$this->js=['moment.min.js'];
+		
+		parent::registerAssetFiles($view);
+	}
 	
 }
