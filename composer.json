@@ -1,0 +1,30 @@
+{
+    "name": "conquer/momentjs",
+    "description": "Conquer monet widget",
+    "keywords": ["yii2", "extension", "widget", "momentjs"],
+    "homepage": "https://github.com/borodulin/yii2-momentjs",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Borodulin",
+            "email": "borodulin@gmail.com",
+            "homepage": "https://github.com/borodulin/yii2-moment"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.0.x-dev"
+        }
+      },
+    "require": {
+    	"php": ">=5.4.0",
+    	"yiisoft/yii2": "*",
+    	"bower-asset/moment": "~2.9.0",
+    },
+	"autoload": {
+		"psr-4": {
+			"conquer\\momentjs\\": ""
+		}
+	}
+}
