@@ -12,13 +12,18 @@ class MomentjsAsset extends \yii\web\AssetBundle
 	// to specify the sourcePath property. Notice the @bower alias used.
 	public $sourcePath = '@bower/moment/min';
 	
+	/**
+	 * Locale support and globally assingment
+	 * @link http://momentjs.com/docs/#/i18n/
+	 * @var string | boolean
+	 */
 	public static $language=false;
 	
 	public function registerAssetFiles($view)
 	{
 		if(self::$language){
 			$this->js=['moment-with-locales.min.js'];
-			//set locale globally
+			//assing locale globally
 			$view->registerJs('moment.locale("'.self::$language.'");');
 		}else
 			$this->js=['moment.min.js'];
