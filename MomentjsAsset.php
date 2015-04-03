@@ -31,4 +31,22 @@ class MomentjsAsset extends \yii\web\AssetBundle
 		parent::registerAssetFiles($view);
 	}
 	
+	/**
+	 * Converts PHP Date format to MomentJS Date format
+	 * 
+	 * @param string $format PHP date format
+	 * @return string
+	 * 
+	 * @link http://php.net/manual/en/function.date.php
+	 * @link http://momentjs.com/docs/#/parsing/string-format/
+	 */
+	public static function fromPhpFormat($format)
+	{
+		return strtr($format, [
+			's'=>'ss','i'=>'mm','g'=>'h','h'=>'hh','G'=>'H','H'=>'HH',
+			'w'=>'e','W'=>'E','j'=>'D','d'=>'DD','D'=>'DDD','l'=>'DDDD',
+			'n'=>'M','m'=>'MM','M'=>'MMM','F'=>'MMMM','y'=>'YY','Y'=>'YYYY','U'=>'X',
+		]);
+	}
+	
 }
