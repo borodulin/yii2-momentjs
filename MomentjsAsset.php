@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2015 Andrey Borodulin
  * @license https://github.com/borodulin/yii2-momentjs/blob/master/LICENSE.md
  */
-namespace conquer\moment;
+namespace conquer\momentjs;
 
 class MomentjsAsset extends \yii\web\AssetBundle
 {
