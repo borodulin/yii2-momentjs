@@ -1,6 +1,6 @@
 {
     "name": "conquer/momentjs",
-    "description": "Conquer moment.js widget",
+    "description": "Yii2 momentjs widget",
     "keywords": ["yii2", "extension", "widget", "momentjs", "moment"],
     "homepage": "https://github.com/borodulin/yii2-momentjs",
     "type": "yii2-extension",
