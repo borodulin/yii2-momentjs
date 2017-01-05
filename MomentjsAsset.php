@@ -26,6 +26,10 @@ class MomentjsAsset extends \yii\web\AssetBundle
             $this->js = ['moment-with-locales.min.js'];
             //assing locale globally
             $key = md5($js = "moment.locale('$language');");
+            if(!isset($view->js[$view::POS_READY])){
+                $view->js[$view::POS_READY] = [];
+            }            
+            
             $view->js[$view::POS_READY] = [$key => $js] + (array)$view->js[$view::POS_READY];
         } else {
             $this->js = ['moment.min.js'];
