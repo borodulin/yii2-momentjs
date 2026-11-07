@@ -1,6 +1,6 @@
 {
     "name": "conquer/momentjs",
-    "description": "Yii2 momentjs widget",
+    "description": "Moment.js for Yii2 with the application locale and PHP date format conversion",
     "keywords": [
         "yii2",
         "extension",
@@ -20,7 +20,7 @@
     ],
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-master": "1.2.x-dev"
         }
     },
     "require": {
@@ -28,9 +28,28 @@
         "yiisoft/yii2": "^2.0",
         "bower-asset/moment": "^2.9.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
     "autoload": {
         "psr-4": {
             "conquer\\momentjs\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "conquer\\momentjs\\tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
         }
     }
 }
